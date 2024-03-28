@@ -170,6 +170,14 @@ In this code, the `reverseWords` function splits the sentence into an array of w
 
 ### Comparative table for those five solutions:
 
+| Approach | Advantages | Disadvantages | Time Complexity | Space Complexity |
+| --- | --- | --- | --- | --- |
+| 1\. Split & Loop | \- Easy to understand. - Simple implementation. | \- Uses extra space for creating the array and StringBuilder. | O(n) | O(n) |
+| 2\. Using Stack | \- Consistent with principles of data structure. | \- Uses extra space for creating the stack and StringBuilder. | O(n) | O(n) |
+| 3\. In-place reversal | \- No use of extra data structures. - Efficient in memory utilization. | \- Logic is slightly more complex. - In-place mutation can be risky if the data needs to be reused. | O(n) | O(1) |
+| 4\. Using Stream API | \- Clean and concise syntax. - The functional style can improve readability. | \- Can be slower due to overhead of Streams. - May be hard to understand for those not familiar with functional programming. | O(n) | O(n) |
+| 5\. Using Deque | \- Well covers concept of data structures. | \- Uses extra space for the Deque and StringBuilder. | O(n) | O(n) |
+
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1711651606884/6b39b2e8-917d-4cb1-afe4-707fb1d427d1.png align="center")
 
 ### Notes:
