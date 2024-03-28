@@ -7,7 +7,7 @@ tags: java, coding, string
 
 ---
 
-Problem Statement:
+### Problem Statement:
 
 ```java
 String input = "Hello World!";
