@@ -7,6 +7,13 @@ tags: java, coding, string
 
 ---
 
+Problem Statement:
+
+```java
+String input = "Hello World!";
+String output = "World! Hello"
+```
+
 ### Solution-1
 
 ```java
