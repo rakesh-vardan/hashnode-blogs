@@ -1,5 +1,5 @@
 ---
-title: "Reverse words in a String - LeetCode#151"
+title: "Reverse words in a String"
 datePublished: Thu Mar 28 2024 18:48:20 GMT+0000 (Coordinated Universal Time)
 cuid: clubl88ct000b08js8h363wof
 slug: reverse-words-in-a-sentence
