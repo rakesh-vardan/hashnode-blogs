@@ -10,9 +10,9 @@ tags: java, code-quality, testautomation, exceptionhandling
 
 ### Introduction
 
-*"Are you tired of dealing with messy*`finally`*blocks just to ensure your resources get closed properly?"*
+*"Are you tired of dealing with messy* `finally` *blocks just to ensure your resources get closed properly?"*
 
-*"Have you ever found yourself tangled in a web of nested*`try-catch`*blocks, only to realize that your application is still prone to resource leaks?"*
+*"Have you ever found yourself tangled in a web of nested* `try-catch` *blocks, only to realize that your application is still prone to resource leaks?"*
 
 If so, you're not alone. Managing resources effectively is a common challenge for many Java programmers, including a surprising number of automation engineers I've interviewed. Despite being introduced in Java 7, the `try-with-resources` statement, a powerful feature that can greatly simplify resource management, remains underutilized in many areas, including test automation. Many engineers continue to use the traditional approach, missing out on the benefits of safer, more readable code.
 
@@ -59,7 +59,7 @@ Let us understand the usage with an example. To read a file using `Scanner` clas
     }
 ```
 
-This method reads and prints the contents of a file named "input.txt". It uses a `Scanner` object to read the file line by line. The `try` block attempts to open the file and read its contents. If the file is not found, a `FileNotFoundException` is caught and its stack trace is printed. ***Regardless of whether an exception is thrown, the***`finally`***block ensures that the***`Scanner`***object is closed to prevent resource leaks.***
+This method reads and prints the contents of a file named "input.txt". It uses a `Scanner` object to read the file line by line. The `try` block attempts to open the file and read its contents. If the file is not found, a `FileNotFoundException` is caught and its stack trace is printed. ***Regardless of whether an exception is thrown, the*** `finally` ***block ensures that the*** `Scanner` ***object is closed to prevent resource leaks.***
 
 Let us implement the same logic using `try-with-resources` syntax
 
@@ -75,7 +75,7 @@ Let us implement the same logic using `try-with-resources` syntax
     }
 ```
 
-Here the `try` block, with the `Scanner` declaration within its parentheses is the `try-with-resources` section. Using this syntax automatically closes the resources declared within the parentheses when the try block is exited, either normally or via an exception. ***This ensures that the***`Scanner`***object is closed to prevent resource leaks, without needing an explicit***`finally`***block*.** If the file is not found, a `FileNotFoundException` is caught and its stack trace is printed.
+Here the `try` block, with the `Scanner` declaration within its parentheses is the `try-with-resources` section. Using this syntax automatically closes the resources declared within the parentheses when the try block is exited, either normally or via an exception. ***This ensures that the*** `Scanner` ***object is closed to prevent resource leaks, without needing an explicit*** `finally` ***block*.** If the file is not found, a `FileNotFoundException` is caught and its stack trace is printed.
 
 ### Working with Multiple Files:
 
@@ -113,7 +113,7 @@ public void methodWithTryCatchFinally() {
     }
 ```
 
-This example is also similar to the previous one, but now we work with 2 files in the try-with-resources section. The code reads data from a file named "input.txt" and writes it to another file named "output.txt". It uses `FileInputStream` to read the input file and `FileOutputStream` to write to the output file. The `try` block attempts to open both files, read data from the input file, and write it to the output file. If an `IOException` occurs during this process (for example, if one of the files does not exist or cannot be opened), the exception is caught and its stack trace is printed. ***The***`finally`***block ensures that both the***`FileInputStream`***and***`FileOutputStream`***are closed, regardless of whether an exception occurred. This is important to prevent resource leaks***. If an `IOException` occurs while trying to close the files, it is also caught and its stack trace is printed.
+This example is also similar to the previous one, but now we work with 2 files in the try-with-resources section. The code reads data from a file named "input.txt" and writes it to another file named "output.txt". It uses `FileInputStream` to read the input file and `FileOutputStream` to write to the output file. The `try` block attempts to open both files, read data from the input file, and write it to the output file. If an `IOException` occurs during this process (for example, if one of the files does not exist or cannot be opened), the exception is caught and its stack trace is printed. ***The*** `finally` ***block ensures that both the*** `FileInputStream` ***and*** `FileOutputStream` ***are closed, regardless of whether an exception occurred. This is important to prevent resource leaks***. If an `IOException` occurs while trying to close the files, it is also caught and its stack trace is printed.
 
 Now, let us change it to a new syntax.
 
@@ -131,7 +131,7 @@ public void methodWithTryWithResources() {
     }
 ```
 
-As you see the same logic has been written concisely using `try-with-resources`. It improves the readability of the program and reduces the complexity & redundant code for resource clean-up. ***The***`try-with-resources`***automatically closes the***`FileInputStream`***and***`FileOutputStream`***resources after use, preventing resource leaks.*** If an `IOException` occurs (like a file not found), it's caught and its stack trace is printed.
+As you see the same logic has been written concisely using `try-with-resources`. It improves the readability of the program and reduces the complexity & redundant code for resource clean-up. ***The*** `try-with-resources` ***automatically closes the*** `FileInputStream` ***and*** `FileOutputStream` ***resources after use, preventing resource leaks.*** If an `IOException` occurs (like a file not found), it's caught and its stack trace is printed.
 
 ### Working with Database Connections:
 
@@ -170,7 +170,7 @@ One more real-time example in test automation is, connecting to the DB and fetch
     }
 ```
 
-Here we are using native classes from `java.sql` JDBC classes to connect to a PostgreSQL database, execute a SQL query, and process the results. It uses a `Connection` object to establish a connection to the database and a `Statement` object to execute the query. The `try` block attempts to establish the connection, execute the query "SELECT \* FROM users", and process each row of the result. If a `SQLException` occurs during this process (for example, if the database connection fails or the query is invalid), the exception is caught and its stack trace is printed. ***The***`finally`***block ensures that both the***`Statement`***and***`Connection`***objects are closed, regardless of whether an exception occurred.If a***`SQLException`***occurs while trying to close the objects, it is also caught and its stack trace is printed.***
+Here we are using native classes from `java.sql` JDBC classes to connect to a PostgreSQL database, execute a SQL query, and process the results. It uses a `Connection` object to establish a connection to the database and a `Statement` object to execute the query. The `try` block attempts to establish the connection, execute the query "SELECT \* FROM users", and process each row of the result. If a `SQLException` occurs during this process (for example, if the database connection fails or the query is invalid), the exception is caught and its stack trace is printed. ***The*** `finally` ***block ensures that both the*** `Statement` ***and*** `Connection` ***objects are closed, regardless of whether an exception occurred. If a*** `SQLException` ***occurs while trying to close the objects, it is also caught and its stack trace is printed.***
 
 Let us convert this logic to use the new syntax.
 
@@ -189,7 +189,7 @@ Let us convert this logic to use the new syntax.
     }
 ```
 
-Here we are doing the same logic but using a `try-with-resources` block to automatically manage the `Connection` and `Statement` resources. ***The***`try-with-resources`***block automatically closes the***`Connection`***and***`Statement`***objects after use, preventing resource leaks.***
+Here we are doing the same logic but using a `try-with-resources` block to automatically manage the `Connection` and `Statement` resources. ***The***`try-with-resources` ***block automatically closes the*** `Connection` ***and*** `Statement` ***objects after use, preventing resource leaks.***
 
 `A try-with-resources block can still have the finally block, which will work in the similar way as with a traditional try block.`
 
