@@ -14,13 +14,13 @@ tags: java, code-quality, testautomation, exceptionhandling
 
 *"Have you ever found yourself tangled in a web of nested*`try-catch`*blocks, only to realize that your application is still prone to resource leaks?"*
 
-If so, you're not alone. Managing resources effectively is a common challenge for many Java programmers, including a surprising number of automation engineers I've interviewed. Despite being introduced in Java 7, the `try-with-resources` statement, a powerful feature that can greatly simplify resource management, remains underutilized in many areas, including test automation. Many engineers still continue to use the traditional approach, missing out on the benefits of safer, more readable code.
+If so, you're not alone. Managing resources effectively is a common challenge for many Java programmers, including a surprising number of automation engineers I've interviewed. Despite being introduced in Java 7, the `try-with-resources` statement, a powerful feature that can greatly simplify resource management, remains underutilized in many areas, including test automation. Many engineers continue to use the traditional approach, missing out on the benefits of safer, more readable code.
 
 In this blog post, we will delve into the `try-with-resources` statement, exploring how it works and how we can use it to improve the Java code. So, let's get started and say goodbye to those messy `finally` blocks!
 
 ### Understanding Try-With-Resources
 
-`try-with-resources` is a try statement that declares one or more resource declarations. An object that needs to be closed once the application has finished using it is called a resource. Files, network connections, and database connections are a few types of resources. ***The resources declared need to implement the***[***Closeable***](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)***or***[***AutoCloseable***](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html)***interfaces.***
+`try-with-resources` is a try statement that declares one or more resource declarations. An object that needs to be closed once the application has finished using it is called a resource. Files, network connections, and database connections are a few types of resources. ***The resources declared need to implement the*** [***Closeable***](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) ***or*** [***AutoCloseable***](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html) ***interfaces.***
 
 An expression that uses `try-with-resources` declares the resource within the try statement. Upon completion of the `try` block, the resource is closed automatically. Compared to the conventional method, which required manually closing the resource in a `finally` block, this is a huge improvement.
 
@@ -35,7 +35,7 @@ The 'try-with-resources' statement has several benefits:
 3. **Improved Exception Handling:** If an exception is thrown both in the try block and when the resource is closed, the `try-with-resources` statement will suppress the exception thrown from the `try` block. This makes the exception-handling code more straightforward.
     
 
-`All the examples discussed here can be found on` [`GitHub`](https://github.com/rakesh-vardan/java-examples/tree/main/src/main/java/io/learning/try_with_resources)
+`All the examples discussed here can be found on`[`GitHub`](https://github.com/rakesh-vardan/java-examples/tree/main/src/main/java/io/learning/try_with_resources)
 
 **Example:**
 
