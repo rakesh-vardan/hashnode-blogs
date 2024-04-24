@@ -3,6 +3,7 @@ title: "[Java] Reverse words in a String"
 datePublished: Thu Mar 28 2024 18:48:20 GMT+0000 (Coordinated Universal Time)
 cuid: clubl88ct000b08js8h363wof
 slug: reverse-words-in-a-sentence
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1713935275613/a949a1db-5be9-436d-b7d6-59a86d35f498.png
 tags: java, coding, string
 
 ---
