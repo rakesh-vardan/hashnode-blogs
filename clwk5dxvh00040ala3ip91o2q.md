@@ -5,6 +5,7 @@ seoDescription: "Winning the Generative AI Kata: Our journey, challenges, and so
 datePublished: Fri May 24 2024 03:54:12 GMT+0000 (Coordinated Universal Time)
 cuid: clwk5dxvh00040ala3ip91o2q
 slug: generative-ai-kata-how-we-won-the-challenge
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1716523555410/681fdc3e-b0be-4a2b-bc0c-21edf761f8e6.png
 tags: express, artificial-intelligence, reactjs, katas, cloud-native, modernization, generative-ai
 
 ---
