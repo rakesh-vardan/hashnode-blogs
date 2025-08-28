@@ -5,6 +5,7 @@ seoDescription: "Explore the strengths of Spring Boot, NestJS, and .NET for back
 datePublished: Thu Aug 28 2025 15:56:19 GMT+0000 (Coordinated Universal Time)
 cuid: cmevl6acy000002jy6pf6fq8w
 slug: choosing-the-right-orm-and-backend-stack-a-journey-through-spring-boot-nestjs-and-net
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/QMCmngPGjQk/upload/caa6cc6659f8dac9dda21450a4fcdeef.jpeg
 tags: postgresql, databases, software-engineering, orm, backend-development
 
 ---
